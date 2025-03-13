@@ -1,0 +1,158 @@
+/*Fonts*/
+
+@font-face {
+  font-family: AiW;
+  src: url(fonts/Alice_in_Wonderland_3.ttf);
+}
+@font-face {
+  font-family: MCL;
+  src: url(fonts/MOONCLAW\ Starplume\ Free\ Trial.otf);
+}
+@font-face {
+  font-family: TWA;
+  src: url(fonts/VintageRough-DemoVersion-Regular.otf);
+}
+
+/*Default*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+  background-color: #000;
+}
+
+/*Navigation Bar*/
+
+.Box1 {
+    display: flex;
+    align-items: center;
+    padding: 10px 80px 10px 40px;
+    background: linear-gradient(90deg, #291f1b, #3d2b22);
+    justify-content: space-between;
+    border-radius: 15px;
+    margin: 10px;
+}
+.Box1 a {
+  font-family: AiW;
+}
+
+.NavBar {
+    overflow: hidden;
+  }
+
+.NavBar a {
+    float: left;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+  }
+
+.DPD-Container {
+    float: left;
+    overflow: hidden;
+  }
+
+.DPD-Container .DPD-Button {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: AiW;
+    margin: 0;
+  }
+
+.NavBar a:hover, .DPD-Container:hover .DPD-Button {
+    background-color: #b8937a;
+    transition: 1s;
+    border-radius: 15px;
+  }
+
+.DPD-Content {
+    margin: 50px 0px 0px 0px;
+    display: none;
+    position: absolute;
+    background-color: #80624c;
+    min-width: 129px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+.DPD-Content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.DPD-Content a:hover {
+    background-color: #b8937a;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+.DPD-Container:hover .DPD-Content {
+    display: block;
+  }
+
+/*Front Page*/
+
+.First {
+  margin: 10px;
+  border-radius: 15px;
+  width: 98.5%;
+  height: 85vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url(images/ChronoVisions.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.Heading1 {
+  font-family: AiW;
+  color: #fff;
+  font-size: 120px;
+}
+.Caption1 {
+  font-family: AiW;
+  color: #fff;
+  font-size: 40px;
+}
+
+.Text1 {
+  text-align: center;
+  padding-top: 30vh;
+}
+
+/*First Scroll*/
+
+.Box2 {
+  align-items: center;
+  padding: 50px 100px 50px 100px;
+  background: #0f0905;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 25px;
+}
+
+.Box3 {
+  display: flex ;
+}
+
+.Heading2 {
+  color: white;
+  font-size: 80px;
+  font-family: AiW;
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+}
