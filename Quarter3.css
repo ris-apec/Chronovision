@@ -1,0 +1,156 @@
+/*Fonts*/
+
+@font-face {
+    font-family: AiW;
+    src: url(fonts/Alice_in_Wonderland_3.ttf);
+  }
+  @font-face {
+    font-family: TWA;
+    src: url(fonts/Fhacondensedfrenchnc-YJ7q.otf);
+  }
+  
+  /*Default*/
+  
+  * {
+      padding: 0px;
+      margin: 0px;
+      font-family: TWA;
+  }
+  
+  body {
+    background-color: #000;
+  }
+  
+  /*Navigation Bar*/
+  
+  .Box1 {
+      display: flex;
+      align-items: center;
+      padding: 10px 80px 10px 40px;
+      background: linear-gradient(90deg, #2d201c, #3d2c27, #3d2b22);
+      justify-content: space-between;
+      border-radius: 15px;
+      margin: 10px;
+  }
+  .Box1 a {
+    font-family: AiW;
+  }
+  
+  .NavBar {
+      overflow: hidden;
+    }
+  
+  .NavBar a {
+      float: left;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      padding: 14px 50px;
+      text-decoration: none;
+    }
+  
+  .DPD-Container {
+      float: left;
+      overflow: hidden;
+    }
+  
+  .DPD-Container .DPD-Button {
+      font-size: 30px;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: AiW;
+      margin: 0;
+    }
+  
+  .NavBar a:hover, .DPD-Container:hover .DPD-Button {
+      background-color: #684b40;
+      transition: 1s;
+      border-radius: 15px;
+      text-shadow: 0 0 5px #fcfafa;
+    }
+  
+  .DPD-Content {
+      margin: 50px 0px 0px 0px;
+      display: none;
+      position: absolute;
+      background-color: #4d362d;
+      min-width: 129px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 0px 0px 15px 15px;
+    }
+  
+  .DPD-Content a {
+      float: none;
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+  
+  .DPD-Content a:hover {
+      background-color: #684b40;
+      border-radius: 0px 0px 15px 15px;
+      text-shadow: 0 0 5px #fff;
+    }
+  
+  .DPD-Container:hover .DPD-Content {
+      display: block;
+    }
+    /*Front Page*/
+    
+    .First {
+      margin: 10px;
+      border-radius: 15px;
+      width: 98.5%;
+      height: 85vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url(images/ChronoVisions.png);
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .Heading1 {
+      font-family: AiW;
+      color: #ffffff;
+      font-size: 80px;
+      padding: 15px 0px 0px 0px;
+    }
+    .Caption1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px;
+    }
+    
+    /*First Scroll*/
+    
+    .Box2 {
+      text-align: center;
+      padding: 30px 100px 95px 100px;
+      background: #0f0f0f;
+      justify-content: space-between;
+      border-radius: 15px;
+      margin: 10px;
+      
+    }
+  
+    .button {
+      color: rgb(0, 0, 0);
+      font-family: AiW;
+      font-size: 30px;
+      padding: 10px 15px 10px 15px;
+      border-radius: 15px;
+      text-decoration: none;
+      background-color: #fff;
+      letter-spacing: 2px;
+    }
+  
+    .button:hover {
+      padding: 15px 20px 15px 20px;
+      font-size: 35px;
+      transition: 0.5s;
+    }
