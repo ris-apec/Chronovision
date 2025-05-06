@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="images/AlarmClock.png">
   <title>𝖈𝖍𝖗𝖔𝖓𝖔𝖛𝖎𝖘𝖎𝖔𝖓</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="q1.css">
   <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
@@ -86,43 +86,39 @@
 
         
         <div class="Main1">
-          <p>"Where every tick,<br> powers imagination." <br><br> - Chronovisions</p>
-          <img src="images/Deco/Polaroid.png" width="500px">
+          <p>Content Preferences <br> Survey Results</p>
+          <img src="images/Deco/Polaroid2.png" width="500px">
         </div>
 
         <section class="Main2">
+          <p class="Sub1">On september 17, 2024— Group 6 Quarter 1 conducted a survey to determine what content type their target audience would most likely view. We placed the results of gender, age, how often they watch youtube, and the type of content they prefer.</p>
 
-          <div class="div1">
-          <div class="Sub1 sub">
-            <p>Chronovisions, we are a visionary brand that aims to inspire and teach lessons to our audience. We strive to power and create imaginative minds to think outside of the box.</p>
-          </div>
-
-          <div class="Sub2 sub">
-            As a film and animation channel, we plan to create animation which implement these lesson into our videos. Not only providing lessons but as well as a learning-entertainment environment for our audience.
-          </div>
-          </div>
-
-          <p class="sub3">Our Members</p>
-          <section class="container">
-            <div class="slider-wrapper">
-              <div class="slider">
-                <img id="slide-1" src="images/Contacts/Clarence.png" />
-                <img id="slide-2" src="images/Contacts/Christine.png" />
-                <img id="slide-3" src="images/Contacts/Milliana.png" />
-                <img id="slide-4" src="images/Contacts/Matthew.png">
-                <img id="slide-5" src="images/Contacts/Gieanne.png">
-              </div>
-              <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
-                <a href="#slide-5"></a>
-              </div>
+          <div class="Box1">
+            <div>
+                <p> Gender </p>
+            <div class="piechart1" id="piechart1" style="width: 320px; height: 220px;"></div>
             </div>
-          </section>
 
+            <div>
+                <p> How often do you watch on youtube? </p>
+            <div class="piechart2" id="piechart2" style="width: 320px; height: 220px;"></div>
+            </div>
+          </div>
+              
         </section>
+
+        <section class="Main3">      
+                <div>
+                    <p> Which one do you <br> mostly watch/take interest in? </p>
+                <div class="piechart3" id="piechart3" style="width: 320px; height: 220px;display: block;margin: auto;"></div>
+                </div>
+
+                <div>
+                  <p> Age </p>
+                  <br>
+              <div class="piechart4" id="piechart4" style="width: 320px; height: 220px;display: block;margin: auto;"></div>
+              </div>
+        </section>  
 
         </div>
       </div>
@@ -151,6 +147,8 @@
 
   </main>
 
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="gsap-member/minified/gsap.min.js"></script>    
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -161,6 +159,78 @@
             scrub: true,
     }
     })
+
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(drawCharts);
+
+  function drawCharts() {
+    // Chart 1
+    var data1 = google.visualization.arrayToDataTable([
+      ['Gender', 'Respondents'],
+      ['Female',     12],
+      ['Male',      4],
+      ['Prefer not to say',  1],
+    ]);
+
+    var options1 = {
+      backgroundColor: '#644f47',
+      legendTextStyle: { color: '#2b2625' },
+    };
+
+    var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+    chart1.draw(data1, options1);
+
+    // Chart 2
+    var data2 = google.visualization.arrayToDataTable([
+      ['How often', 'Votes'],
+      ['Always',  9],
+      ['Sometimes',  8],
+      ['Never', 0]
+    ]);
+
+    var options2 = {
+        backgroundColor: '#644f47',
+        legendTextStyle: { color: '#2b2625' },
+    };
+
+    var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+    chart2.draw(data2, options2);
+
+    // Chart 3
+    var data3 = google.visualization.arrayToDataTable([
+      ['Genres', 'Votes'],
+      ['Video Gaming', 7],
+      ['Film and animation', 9],
+      ['Education', 1]
+    ]);
+
+    var options3 = {
+        backgroundColor: '#644f47',
+        legendTextStyle: { color: '#2b2625' },
+    }
+
+    var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+    chart3.draw(data3, options3);
+
+    // Chart 4
+    var data4 = google.visualization.arrayToDataTable([
+      ['Age', 'Votes'],
+      ['13', 2],
+      ['14', 9],
+      ['15', 6]
+    ]);
+
+    var options4 = {
+        backgroundColor: '#644f47',
+        legendTextStyle: { color: '#2b2625' },
+    }
+
+    var chart4 = new google.visualization.PieChart(document.getElementById('piechart4'));
+    chart4.draw(data4, options4);
+
+  };
+
   </script>
+
 </body>
 </html>
